@@ -4,4 +4,5 @@
     <string name="about_title">О программе</string>
     <string name="button_name">Перейти на другой экран</string>
     <string name="title_activity_birthday">BirthdayActivity</string>
+    <string name="who">Кто украл два кусочека колбаски?!</string>
 </resources>

@@ -1,69 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+    android:id="@+id/constraintLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/editTextGift"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="211dp"
-        android:ems="10"
-        android:hint="Описание"
-        android:inputType="textPersonName" />
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="#fa2255"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/sherlock" />
 
-    <EditText
-        android:id="@+id/editTextUser"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="89dp"
-        android:ems="10"
-        android:hint="Кому"
-        android:inputType="textPersonName" />
+        android:layout_weight="1"
+        android:text="@string/who"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <EditText
-        android:id="@+id/editSender"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextGift"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginLeft="69dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="180dp"
-        android:ems="10"
-        android:hint="От кого"
-        android:inputType="textPersonName" />
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonChoose"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginLeft="69dp"
-        android:layout_marginBottom="104dp"
         android:onClick="onClick"
-        android:text="@string/button_name">
-
-    </Button>
-</RelativeLayout>
+        android:text="Сделать выбор" />
+</LinearLayout>

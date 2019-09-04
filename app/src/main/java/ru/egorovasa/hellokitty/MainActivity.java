@@ -10,8 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 
 public class MainActivity extends AppCompatActivity {
+    static final private int CHOOSE_THIEF = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +23,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        EditText userEditText = (EditText) findViewById(R.id.editTextUser);
-        EditText giftEditText = (EditText) findViewById(R.id.editTextGift);
-        EditText senderEditText = (EditText) findViewById(R.id.editSender);
+        Intent questionIntent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivityForResult(questionIntent, CHOOSE_THIEF);
+    }
 
-        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-        intent.putExtra("username", userEditText.getText().toString());
-        intent.putExtra("gift", giftEditText.getText().toString());
-        intent.putExtra("sender", senderEditText.getText().toString());
-        startActivity(intent);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        TextView infoTextView = (TextView) findViewById(R.id.textViewInfo);
+
+        if (requestCode == CHOOSE_THIEF) {
+            String thiefName = data.getStringExtra(AboutActivity.THIEF);
+            infoTextView.setText(thiefName);
+        } else {
+            infoTextView.setText("");
+        }
     }
 }
