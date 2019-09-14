@@ -1,16 +1,12 @@
-package ru.egorovasa.hellokitty;
+package ru.egorovasa.sherlock;
 
 import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import ru.egorovasa.hellokitty.R;
 
 
 public class MainActivity extends AppCompatActivity {

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="ru.egorovasa.sherlock.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name="ru.egorovasa.sherlock.AboutActivity"
             android:label="@string/about_title"></activity>
         <activity
-            android:name=".BirthdayActivity"
+            android:name="ru.egorovasa.sherlock.BirthdayActivity"
             android:label="@string/title_activity_birthday"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

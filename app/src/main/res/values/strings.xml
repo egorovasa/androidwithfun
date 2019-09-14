@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hello Kitty</string>
+    <string name="app_name">Sherlock</string>
 
     <string name="about_title">О программе</string>
     <string name="button_name">Перейти на другой экран</string>
